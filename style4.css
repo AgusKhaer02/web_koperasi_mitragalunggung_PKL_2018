@@ -1,0 +1,11 @@
+.table{
+    border-style: none;
+    font-style:tahoma;
+    margin :50px;
+    border-collapse:collapse;
+}
+.table, th{
+}
+.table tr:nth-child(odd) td{
+    background-color:#f2f1ef;
+}

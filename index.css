@@ -1,0 +1,89 @@
+.profile__form {
+    position: relative;
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 3em;
+    border-radius: .25em;
+    -webkit-filter: drop-shadow(0 0 2em rgba(0,0,0,0.2));
+    transition: 
+      opacity .4s ease-in-out,
+      height .4s ease-in-out,
+      transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      padding .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .profile__fields {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .input {
+    width: 100%;
+    font-size: 100%;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    height: 2rem;
+    line-height: 2rem;
+    border-bottom: 2px solid #ddd;
+    color: #777;
+    transition: all .2s ease-in;
+  }
+  #masuk {
+      padding-top:10px;
+      padding-bottom:10px;
+      padding-left:20px;
+      padding-right:20px;
+      border-radius:6px;
+      background-color:#0487f9;
+      transition:400ms;
+      color:white;
+      border-style:flat;
+      cursor:pointer;
+  }
+  #masuk:hover{
+    background-color:#59b0fd;
+  }
+  #masuk:active{
+    border-radius:100%;
+  }
+  #daftar{
+    padding-top:5px;
+    padding-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
+    border-radius:6px;
+    background-color:#fd2313;
+    transition:400ms;
+    color:white;
+    border-style:flat;
+    cursor:pointer;
+  }
+  #daftar:hover{
+    background-color:#fa3c2e;
+  }
+  #daftar:active{
+    border-radius:100%;
+  }
+  .field {
+    position: relative;
+  }
+  .input:focus {
+    outline: 0;
+    border-color: #ccc;
+  }
+  .input:focus + .label,
+  input:valid + .label {
+    transform: translateY(-100%);
+    font-size: 0.75rem;
+    color: #ccc;
+  }
+  .label {
+    position: absolute;
+    height: 2rem;
+    line-height: 2rem;
+    bottom: 0;
+    color: rgb(83, 83, 83);
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }

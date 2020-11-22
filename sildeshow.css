@@ -1,0 +1,97 @@
+.slider {display: inline-block;padding: 3px;border: 2px solid #333;height:auto}
+.slider input {display: none}
+.slider img {vertical-align: top}
+.slider label {cursor: pointer}
+.slider-window {
+ position: relative;margin-bottom: 20px;
+ box-shadow:0 15px 10px -10px rgba(0, 0, 0, 0.7),
+            0 1px 4px rgba(0, 0, 0, 0.5),
+            0 0 40px rgba(0, 0, 0, 0.2) inset}
+
+.slider-window:hover figcaption {opacity: 1}
+.slider-window>label {
+ position: absolute;top: 0;bottom: 50px;left: 0;
+ right: 0;display: none;z-index: 1}
+
+.slider-window, .slider-preview {
+ overflow: hidden;-webkit-transition: width 0.3s ease;
+ -moz-transition: width 0.3s ease;-o-transition: width 0.3s ease;
+ transition: width 0.3s ease}
+
+.slider-images>figure {position: relative;display: inline-block;margin: 0}
+.slider-images figcaption {
+ position: absolute;padding-top: 13px;height: 40px;bottom: 0;
+ left: 0;right: 0;color:#fff;background: rgba(204, 0, 0,.5);
+ text-shadow: 1px 1px 3px #333;text-align:center;opacity: 0;
+ -webkit-transition: opacity 0.3s ease;-moz-transition: opacity 0.3s ease;
+ -o-transition: opacity 0.3s ease;transition: opacity 0.3s ease}
+
+.slider-thumbnails img {
+ margin: 0 2.5px 4px 0;box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.7);
+ border:1px solid red;opacity: 0.75;-webkit-transition: opacity 0.3s ease;
+ -moz-transition: opacity 0.3s ease;-o-transition: opacity 0.3s ease;
+ transition: opacity 0.3s ease}
+
+.slider-thumbnails img:hover {opacity: 1}
+.slider-images, .slider-thumbnails {
+ position: relative;white-space: nowrap;-webkit-transition: left 0.3s ease;
+ -moz-transition: left 0.3s ease;-o-transition: left 0.3s ease;
+ transition: left 0.3s ease}
+
+/* Prev & Next buttons */
+#img01:checked~.slider-window:hover>label[for="img02"],
+#img02:checked~.slider-window:hover>label[for="img03"],
+#img03:checked~.slider-window:hover>label[for="img04"],
+#img04:checked~.slider-window:hover>label[for="img05"],
+#img05:checked~.slider-window:hover>label[for="img06"],
+#img06:checked~.slider-window:hover>label[for="img07"] {left: 50%;display: block}
+#img01:checked~.slider-window:hover>label[for="img02"]:hover:after,
+#img02:checked~.slider-window:hover>label[for="img03"]:hover:after,
+#img03:checked~.slider-window:hover>label[for="img04"]:hover:after,
+#img04:checked~.slider-window:hover>label[for="img05"]:hover:after,
+#img05:checked~.slider-window:hover>label[for="img06"]:hover:after,
+#img06:checked~.slider-window:hover>label[for="img07"]:hover:after {
+ content: "Next";position: absolute;right: 0;color:#fff;
+ text-shadow:1px 2px 1px #333;top: 20px;display: block;
+ padding: 10px 30px;border-radius: 22px 0 0 22px;background: #39f}
+
+#img02:checked~.slider-window:hover>label[for="img01"],
+#img03:checked~.slider-window:hover>label[for="img02"],
+#img04:checked~.slider-window:hover>label[for="img03"],
+#img05:checked~.slider-window:hover>label[for="img04"],
+#img06:checked~.slider-window:hover>label[for="img05"],
+#img07:checked~.slider-window:hover>label[for="img06"] {right: 50%;display: block}
+#img02:checked~.slider-window:hover>label[for="img01"]:hover:after,
+#img03:checked~.slider-window:hover>label[for="img02"]:hover:after,
+#img04:checked~.slider-window:hover>label[for="img03"]:hover:after,
+#img05:checked~.slider-window:hover>label[for="img04"]:hover:after,
+#img06:checked~.slider-window:hover>label[for="img05"]:hover:after,
+#img07:checked~.slider-window:hover>label[for="img06"]:hover:after {
+ content: "Prev";position: absolute;left: 0;color:#fff;
+ text-shadow:1px 2px 1px #333;top: 20px;display: block;
+ padding: 10px 30px;border-radius: 0 22px 22px 0;background: #39f}
+
+/* Image */
+#img01:checked~.slider-window>.slider-images {left:0px}
+#img01:checked~.slider-window, #img01:checked~.slider-preview {width:600px}
+#img02:checked~.slider-window>.slider-images {left:-600px}
+#img02:checked~.slider-window, #img02:checked~.slider-preview {width:600px}
+#img03:checked~.slider-window>.slider-images {left:-1200px}
+#img03:checked~.slider-window, #img03:checked~.slider-preview {width:600px}
+#img04:checked~.slider-window>.slider-images {left:-1800px}
+#img04:checked~.slider-window, #img04:checked~.slider-preview {width:600px}
+#img05:checked~.slider-window>.slider-images {left:-2400px}
+#img05:checked~.slider-window, #img05:checked~.slider-preview {width:600px}
+#img06:checked~.slider-window>.slider-images {left:-3000px}
+#img06:checked~.slider-window, #img06:checked~.slider-preview {width:600px}
+#img07:checked~.slider-window>.slider-images {left:-3600px}
+#img07:checked~.slider-window, #img07:checked~.slider-preview {width:600px}
+
+/* Thumbnails */
+#img01:checked~.slider-preview>.slider-thumbnails {left:0px}
+#img02:checked~.slider-preview>.slider-thumbnails {left:-120px}
+#img03:checked~.slider-preview>.slider-thumbnails {left:-241px}
+#img04:checked~.slider-preview>.slider-thumbnails {left:-361px}
+#img05:checked~.slider-preview>.slider-thumbnails {left:-482px}
+#img06:checked~.slider-preview>.slider-thumbnails {left:-602px}
+#img07:checked~.slider-preview>.slider-thumbnails {left:-723px}

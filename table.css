@@ -1,0 +1,25 @@
+.table{
+    border-style: none; 
+    font-style:tahoma;
+    margin :50px;
+    border-collapse:collapse;
+    border-color:white;
+}
+.table tr td{
+    padding:3px;
+    border-style:groove;
+}
+.table tr:nth-child(odd) td{
+    background-color:#b5b5b5;
+}
+.table tr:nth-child(even) td{
+    background-color:white;
+}
+.tmblcari{
+    border-radius:2px;
+    background-color:#00cc17;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+    padding:5px 10px;
+}

@@ -1,0 +1,11 @@
+#form{
+    font-family:tahoma;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top:20px;
+    padding-bottom:20px;
+    background-color: rgb(223, 223, 223);
+    float:left;
+    border-top-right-radius:5px ;
+    border-bottom-right-radius: 5px;
+}
